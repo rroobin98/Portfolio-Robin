@@ -15,7 +15,7 @@ const TAB_DATA = [
         <li>Firebase</li>
         <li>JavaScript</li>
         <li>React</li>
-        <li>Wordpress</li>
+        <li>WordPress</li>
       </ul>
     ),
   },
@@ -24,7 +24,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li> Frontend Developer At Chas Academy</li>
+        <li>Frontend Developer At Chas Academy</li>
       </ul>
     ),
   },
@@ -54,7 +54,7 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about.jpg" width={500} height={500} />
+        <Image src="/images/about.jpg" width={500} height={500} alt="About me image" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -70,22 +70,19 @@ const AboutSection = () => {
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
-              Skills{" "}
+              Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              {" "}
-              Education{" "}
+              Education
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
-              {" "}
-              Self-taught skills{" "}
+              Self-taught skills
             </TabButton>
           </div>
           <div className="mt-8">

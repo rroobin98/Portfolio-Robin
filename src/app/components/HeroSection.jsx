@@ -15,7 +15,7 @@ const HeroSection = () => {
                 <div className="col-span-7 place-self-center text-center sm:text-left">
                     <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-600">
-                            Hello, I'm{" "}
+                            Hello, I&apos;m{" "}
                         </span>
                         <br />
                         <TypeAnimation
@@ -35,7 +35,7 @@ const HeroSection = () => {
                         />
                     </h1>
                     <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-                    Hi, I'm Robin Lundström, a passionate and dedicated web and mobile developer. With a strong foundation in both front-end and back-end technologies, I specialize in creating dynamic, user-friendly applications that deliver seamless experiences across all devices. Currently, I am seeking new opportunities to leverage my skills and contribute to innovative projects as a developer.
+                        Hi, I&apos;m Robin Lundström, a passionate and dedicated web and mobile developer. With a strong foundation in both front-end and back-end technologies, I specialize in creating dynamic, user-friendly applications that deliver seamless experiences across all devices. Currently, I am seeking new opportunities to leverage my skills and contribute to innovative projects as a developer.
                     </p>
                     <div>
                         <button
