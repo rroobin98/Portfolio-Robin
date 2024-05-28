@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import MailIcon from "../../../public/gmail.svg";
@@ -7,45 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
-  const [error, setError] = useState(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSONdata,
-    };
-
-    try {
-      const response = await fetch(endpoint, options);
-      const resData = await response.json();
-
-      if (response.ok) {
-        console.log("Message sent.");
-        setEmailSubmitted(true);
-        setError(null);
-      } else {
-        console.error("Failed to send message:", resData);
-        setError("Failed to send message. Please try again later.");
-      }
-    } catch (err) {
-      console.error("An error occurred:", err);
-      setError("An error occurred. Please try again later.");
-    }
-  };
-
   return (
     <section
       id="contact"
@@ -69,7 +30,7 @@ const EmailSection = () => {
           </Link>
         </div>
       </div>
-      
+
     </section>
   );
 };
