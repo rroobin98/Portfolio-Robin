@@ -1,7 +1,9 @@
 "use client";
+
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import ImageModal from "./ImageModal"; // Import the ImageModal component
 import { motion, useInView } from "framer-motion";
 
 const projectsData = [
@@ -63,11 +65,23 @@ const projectsData = [
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
+  };
+
+  const handlePreviewClick = (imageUrl) => {
+    setSelectedImage(imageUrl);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
   };
 
   const filteredProjects = projectsData.filter((project) =>
@@ -117,10 +131,16 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              onPreviewClick={handlePreviewClick}
             />
           </motion.li>
         ))}
       </ul>
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        imageUrl={selectedImage}
+      />
     </section>
   );
 };
