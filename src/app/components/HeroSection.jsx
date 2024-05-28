@@ -19,7 +19,7 @@ const HeroSection = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
               sequence={[
                 "Robin",
@@ -37,7 +37,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Hi, I'm Robin Lundström, a passionate and dedicated web and mobile developer. With a strong foundation in both front-end and back-end technologies, I specialize in creating dynamic, user-friendly applications that deliver seamless experiences across all devices. Currently, I am seeking new opportunities to leverage my skills and contribute to innovative projects as a developer.
+            Hi, I&apos;m Robin Lundström, a passionate and dedicated web and mobile developer. With a strong foundation in both front-end and back-end technologies, I specialize in creating dynamic, user-friendly applications that deliver seamless experiences across all devices. Currently, I am seeking new opportunities to leverage my skills and contribute to innovative projects as a developer.
           </p>
           <div>
             <Link
